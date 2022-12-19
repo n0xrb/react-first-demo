@@ -1,12 +1,9 @@
 import PropTypes from "prop-types";
 
-export function Button({ text, name, type }) {
-	const HandleClick = (e) => {
-		console.log(e.target.id);
-	};
+export function Button({ text, type }) {
 	return (
-		<button id="123" onClick={HandleClick} type={type}>
-			{text} - {name}
+		<button id="123" type={type}>
+			{text}
 		</button>
 	);
 }
@@ -17,6 +14,5 @@ Button.propTypes = {
 };
 
 Button.defaultProps = {
-	name: "Some User",
 	type: "button",
 };
